@@ -168,7 +168,7 @@ from rent_with_date
 group by date_dt
 order by date_dt asc;
 
--- понять, кто больш ебронирует машины (опытные водители или нет) ----
+-- понять, кто больше бронирует машины (опытные водители или нет) ----
 select count(rent_id), 'experience more then 2' as statistic from rent_fact
 where client_nm in (select first_nm from client
     where exp_value >= 2)
